@@ -15,6 +15,7 @@ const perspectiveCamera = new THREE.PerspectiveCamera(
   // 若物体距离相机超过 far，则不会显示；若小于 far，则正常显示。
   3000
 );
+// 三维模型的包围盒尺寸的量级为 100
 perspectiveCamera.position.set(173, 297, 303);
 perspectiveCamera.lookAt(0, 0, 0);
 

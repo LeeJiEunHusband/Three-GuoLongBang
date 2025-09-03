@@ -15,15 +15,12 @@ const perspectiveCamera = new THREE.PerspectiveCamera(
   // 若物体距离相机超过 far，则不会显示；若小于 far，则正常显示。
   3000
 );
-
 // 包围盒的中心点坐标
 const x = 121.49;
 const y = 31.23;
 const z = 0;
-
 // 偏移量
 const offset = 0.02;
-
 perspectiveCamera.position.set(x + offset, y + offset, z + offset);
 perspectiveCamera.lookAt(x, y, z);
 

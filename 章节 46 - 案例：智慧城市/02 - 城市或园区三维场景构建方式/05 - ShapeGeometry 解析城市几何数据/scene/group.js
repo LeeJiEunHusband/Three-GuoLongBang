@@ -12,16 +12,13 @@ const shape = new Three.Shape([
   new Three.Vector2(40, 120),
   new Three.Vector2(-20, 80),
 ]);
-
 // 二维平面几何：相当于填充多个多边形的面
 const shapeGeometry = new Three.ShapeGeometry(shape);
-
 // 漫反射材质
 const meshLambertMaterial = new Three.MeshLambertMaterial({
   color: 0x00ffff,
   side: Three.DoubleSide,
 });
-
 // 网格对象
 const mesh = new Three.Mesh(shapeGeometry, meshLambertMaterial);
 
