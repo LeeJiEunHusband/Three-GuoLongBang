@@ -8,7 +8,7 @@ const group = new Three.Group();
 const gltfLoader = new GLTFLoader();
 
 gltfLoader.load('./model/上海外滩.glb', (gltf) => {
-  console.log('getModelSize', getModelSize(gltf.scene));
+  console.log('size', getModelSize(gltf.scene));
 
   group.add(gltf.scene);
 });

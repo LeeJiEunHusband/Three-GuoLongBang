@@ -7,10 +7,10 @@ function getModelSize(object) {
   box3.expandByObject(object);
 
   // 创建三维向量对象，用来存储包围盒的长宽高
-  const vector3 = new Three.Vector3();
-  box3.getSize(vector3);
+  const size = new Three.Vector3();
+  box3.getSize(size);
 
-  return vector3;
+  return size;
 }
 
 export default getModelSize;
