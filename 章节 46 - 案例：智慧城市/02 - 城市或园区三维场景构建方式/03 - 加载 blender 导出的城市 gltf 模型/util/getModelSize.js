@@ -1,7 +1,7 @@
 import * as Three from '../../../three/build/three.module.js';
 
 // 计算三维模型的包围盒尺寸
-export function getModelSize(object) {
+function getModelSize(object) {
   // 创建包围盒对象，用来计算三维物体的整体范围
   const box3 = new Three.Box3();
   box3.expandByObject(object);
@@ -12,3 +12,5 @@ export function getModelSize(object) {
 
   return vector3;
 }
+
+export default getModelSize;

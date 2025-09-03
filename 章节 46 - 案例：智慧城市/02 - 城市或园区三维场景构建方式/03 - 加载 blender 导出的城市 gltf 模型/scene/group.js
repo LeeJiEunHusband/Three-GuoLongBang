@@ -1,6 +1,6 @@
 import * as Three from '../../../three/build/three.module.js';
 import { GLTFLoader } from '../../../three/examples/jsm/loaders/GLTFLoader.js';
-import { getModelSize } from '../util/getModelSize.js';
+import getModelSize from '../util/getModelSize.js';
 
 // 组（容器）：统一管理多个网格对象
 const group = new Three.Group();
