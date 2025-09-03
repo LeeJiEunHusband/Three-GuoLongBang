@@ -6,10 +6,10 @@ function createPolygonMesh(coordinates) {
     points.push(new Three.Vector2(...coordinate));
   });
 
-  // 二维形状
+  // 二维形状：相当于画一条闭合的线
   const shape = new Three.Shape(points);
 
-  // 二维平面几何
+  // 二维平面几何：相当于填充多个多边形的面
   const shapeGeometry = new Three.ShapeGeometry(shape);
 
   // 漫反射材质

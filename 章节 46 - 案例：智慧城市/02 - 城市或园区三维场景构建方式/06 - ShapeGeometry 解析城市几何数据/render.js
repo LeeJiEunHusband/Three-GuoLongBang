@@ -11,10 +11,8 @@ const orbitControls = new OrbitControls(
   perspectiveCamera,
   webGLRenderer.domElement
 );
-
 // 设置控制器的旋转、缩放、平移的中心点
 orbitControls.target.set(x, y, z);
-
 // 等价于：perspectiveCamera.lookAt(orbitControls.target);
 orbitControls.update();
 

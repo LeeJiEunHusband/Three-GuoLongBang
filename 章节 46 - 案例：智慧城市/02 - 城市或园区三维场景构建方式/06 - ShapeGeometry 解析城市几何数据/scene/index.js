@@ -22,6 +22,7 @@ scene.add(ambientLight);
 
 // 坐标轴辅助器
 const axesHelper = new Three.AxesHelper(250);
+// 设置坐标轴辅助器的位置
 axesHelper.position.set(x, y, z);
 scene.add(axesHelper);
 

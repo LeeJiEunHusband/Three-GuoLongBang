@@ -7,7 +7,6 @@ const group = new Three.Group();
 
 // 创建通用文件加载器
 const fileLoader = new Three.FileLoader();
-
 // 设置通用文件加载器的响应类型
 fileLoader.setResponseType('json');
 
@@ -18,6 +17,7 @@ fileLoader.load('./geojson/黄浦江.json', (data) => {
     huangpuRiverGroup.add(createPolygonMesh(feature.geometry.coordinates));
   });
 
+  // 计算三维模型的包围盒尺寸和中心点坐标
   const { size, center } = getModelBoundingBox(huangpuRiverGroup);
   console.log('size', size);
   console.log('center', center);
