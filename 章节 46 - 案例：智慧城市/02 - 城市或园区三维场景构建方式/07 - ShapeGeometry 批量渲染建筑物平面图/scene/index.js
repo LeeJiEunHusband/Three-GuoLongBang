@@ -1,5 +1,6 @@
 import * as Three from '../../../three/build/three.module.js';
 import group from './group.js';
+import { x, y, z } from '../camera.js';
 
 // 场景
 const scene = new Three.Scene();
@@ -21,6 +22,8 @@ scene.add(ambientLight);
 
 // 坐标轴辅助器
 const axesHelper = new Three.AxesHelper(250);
+// 设置坐标轴辅助器的位置
+axesHelper.position.set(x, y, z);
 scene.add(axesHelper);
 
 export default scene;

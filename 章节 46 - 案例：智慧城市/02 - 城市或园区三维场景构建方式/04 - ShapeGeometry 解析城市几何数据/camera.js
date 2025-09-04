@@ -10,25 +10,14 @@ const perspectiveCamera = new THREE.PerspectiveCamera(
   window.innerWidth / window.innerHeight,
   // 近裁剪面：相机前方多近的距离开始渲染
   // 若物体靠近相机距离小于 near，则不会显示；若大于 near，则正常显示。
-  0.01,
+  1,
   // 远裁剪面：相机前方多远的距离渲染结束
   // 若物体距离相机超过 far，则不会显示；若小于 far，则正常显示。
   3000
 );
-// 包围盒的中心点坐标
-const x = 121.49489974975586;
-const y = 31.242127418518066;
-const z = 0;
-// 偏移量
-// const offset = 0.02;
-// perspectiveCamera.position.set(x + offset, y + offset, z + offset);
-// 通过调试透视相机位置来获取透视相机最佳位置
-perspectiveCamera.position.set(
-  121.4947956102882,
-  31.18247388022733,
-  0.0334277597052763
-);
-perspectiveCamera.lookAt(x, y, z);
+// 三维模型的包围盒尺寸的量级为 100
+perspectiveCamera.position.set(173, 297, 303);
+perspectiveCamera.lookAt(0, 0, 0);
 
 // 当窗口大小变化时，重新设置透视相机的宽高比和投影矩阵
 window.addEventListener('resize', () => {
@@ -37,4 +26,4 @@ window.addEventListener('resize', () => {
   perspectiveCamera.updateProjectionMatrix();
 });
 
-export { perspectiveCamera, x, y, z };
+export { perspectiveCamera };

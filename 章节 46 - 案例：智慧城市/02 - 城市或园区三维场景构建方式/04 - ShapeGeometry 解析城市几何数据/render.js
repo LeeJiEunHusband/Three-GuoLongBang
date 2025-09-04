@@ -3,18 +3,11 @@ import { webGLRenderer } from './renderer.js';
 // 引入场景对象
 import scene from './scene/index.js';
 // 引入透视相机
-import { perspectiveCamera, x, y, z } from './camera.js';
+import { perspectiveCamera } from './camera.js';
 import { OrbitControls } from '../../three/examples/jsm/controls/OrbitControls.js';
 
 // 控制器：旋转、缩放、平移相机
-const orbitControls = new OrbitControls(
-  perspectiveCamera,
-  webGLRenderer.domElement
-);
-// 设置控制器的旋转、缩放、平移的中心点
-orbitControls.target.set(x, y, z);
-// 等价于：perspectiveCamera.lookAt(orbitControls.target);
-orbitControls.update();
+new OrbitControls(perspectiveCamera, webGLRenderer.domElement);
 
 // 渲染函数
 function render() {
