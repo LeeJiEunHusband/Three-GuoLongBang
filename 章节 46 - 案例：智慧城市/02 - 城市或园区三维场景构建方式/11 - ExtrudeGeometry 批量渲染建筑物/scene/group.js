@@ -29,7 +29,12 @@ fileLoader.load('./geojson/上海外滩.json', (data) => {
     if (feature.geometry.type === 'Polygon') {
       feature.geometry.coordinates = [feature.geometry.coordinates];
     }
-    shanghaiBundGroup.add(createMultiPolygonMesh(feature.geometry.coordinates));
+    shanghaiBundGroup.add(
+      createMultiPolygonMesh(
+        feature.geometry.coordinates,
+        feature.properties.Floor * 3
+      )
+    );
   });
 
   // 计算三维模型的包围盒尺寸和中心点坐标
