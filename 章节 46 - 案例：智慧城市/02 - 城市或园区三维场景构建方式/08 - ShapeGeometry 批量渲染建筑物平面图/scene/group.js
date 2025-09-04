@@ -20,11 +20,6 @@ fileLoader.load('./geojson/黄浦江.json', (data) => {
     huangpuRiverGroup.add(createMultiPolygonMesh(feature.geometry.coordinates));
   });
 
-  // 计算三维模型的包围盒尺寸和中心点坐标
-  const { size, center } = getModelBoundingBox(huangpuRiverGroup);
-  console.log('size', size);
-  console.log('center', center);
-
   group.add(huangpuRiverGroup);
 });
 
@@ -36,6 +31,11 @@ fileLoader.load('./geojson/上海外滩.json', (data) => {
     }
     shanghaiBundGroup.add(createMultiPolygonMesh(feature.geometry.coordinates));
   });
+
+  // 计算三维模型的包围盒尺寸和中心点坐标
+  const { size, center } = getModelBoundingBox(shanghaiBundGroup);
+  console.log('size', size);
+  console.log('center', center);
 
   group.add(shanghaiBundGroup);
 });
