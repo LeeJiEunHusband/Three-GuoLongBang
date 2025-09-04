@@ -16,8 +16,8 @@ const perspectiveCamera = new THREE.PerspectiveCamera(
   3000
 );
 // 包围盒的中心点坐标
-const x = 121.49;
-const y = 31.24;
+const x = 121.49489974975586;
+const y = 31.242127418518066;
 const z = 0;
 // 偏移量
 const offset = 0.02;
