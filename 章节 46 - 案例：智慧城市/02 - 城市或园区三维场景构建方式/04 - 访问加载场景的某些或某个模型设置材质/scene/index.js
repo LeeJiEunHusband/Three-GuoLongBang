@@ -20,7 +20,7 @@ const ambientLight = new Three.AmbientLight(0xffffff, 0.3);
 scene.add(ambientLight);
 
 // 坐标轴辅助器
-const axesHelper = new Three.AxesHelper(250);
+const axesHelper = new Three.AxesHelper(4000);
 scene.add(axesHelper);
 
 export default scene;
