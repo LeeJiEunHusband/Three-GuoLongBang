@@ -20,8 +20,14 @@ const x = 13524750.5;
 const y = 3664234.375;
 const z = 0;
 // 偏移量
-const offset = 5000;
-perspectiveCamera.position.set(x + offset, y + offset, z + offset);
+// const offset = 5000;
+// perspectiveCamera.position.set(x + offset, y + offset, z + offset);
+// 通过调试透视相机位置来获取透视相机最佳位置
+perspectiveCamera.position.set(
+  13524746.719182102,
+  3656766.5898287343,
+  4385.449844798729
+);
 perspectiveCamera.lookAt(x, y, z);
 
 // 当窗口大小变化时，重新设置透视相机的宽高比和投影矩阵

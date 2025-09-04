@@ -16,7 +16,11 @@ const perspectiveCamera = new THREE.PerspectiveCamera(
   30000
 );
 // 三维模型的包围盒尺寸的量级为 1000
-perspectiveCamera.position.set(-2795.11, 832, 374);
+perspectiveCamera.position.set(
+  -4127.28564878283,
+  1601.2207395488,
+  207.57414553070137
+);
 perspectiveCamera.lookAt(0, 0, 0);
 
 // 当窗口大小变化时，重新设置透视相机的宽高比和投影矩阵
