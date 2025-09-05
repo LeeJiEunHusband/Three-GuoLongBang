@@ -7,7 +7,7 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>10 - ExtrudeGeometry 批量渲染建筑物</title>
+    <title>11 - 代码生成的模型导出 gltf 格式</title>
     <style>
       html,
       body {
@@ -19,8 +19,14 @@
   <body>
     <script type="module">
       import { webGLRenderer } from './render.js';
+      import exportModel from './util/exportModel.js';
+      import group from './scene/group.js';
 
       document.body.appendChild(webGLRenderer.domElement);
+
+      // setTimeout(() => {
+      //   exportModel(group, '上海外滩');
+      // }, 10000);
     </script>
   </body>
 </html>
